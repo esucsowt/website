@@ -40,41 +40,50 @@
                 <span class="icon-bar"></span>
             </button>
 
-<!--            <form class="navbar-search">-->
-<!--                <div class="form-group">-->
-<!--                  <div class="input-group">-->
-<!--                    <input class="form-control" name="search" placeholder="Search" autocomplete="off" autofocus="autofocus" type="text">-->
-<!--                      <span class="input-group-btn">-->
-<!--                        <button class="btn btn-default" type="button">-->
-<!--                            <span class="glyphicon glyphicon-search"></span>-->
-<!--                        </button>-->
-<!--                       </span>-->
-<!--                  </div>-->
-<!--                </div>-->
-<!--             </form>-->
+            <form class="navbar-search">
+                <div class="form-group">
+                  <div class="input-group">
+                    <input class="form-control" name="search" placeholder="Search" autocomplete="off" autofocus="autofocus" type="text">
+                      <span class="input-group-btn">
+                        <button class="btn btn-default" type="button">
+                            <span class="glyphicon glyphicon-search"></span>
+                        </button>
+                       </span>
+                  </div>
+                </div>
+             </form>
         </div>
         
         <div class="collapse navbar-collapse" id="navbar-elements">
 
+<!--          <ul class="nav navbar-nav navbar-center">-->
+<!--              <form class="form-inline">-->
+<!--                  <input class="form-control" type="search" placeholder="Search" aria-label="Search">-->
+<!--                  <button class="btn btn-outline-success" type="submit">-->
+<!--                      <span class="glyphicon glyphicon-search"></span>-->
+<!--                  </button>-->
+<!--              </form>-->
+<!--          </ul>-->
+
           <ul class="nav navbar-nav navbar-left">
-              <li class="nav-item"><a href="{% url 'home' %}" class="btn btn-simple btn-lg">Home</a></li>
               {% if user.is_authenticated %}
-                  <li class="nav-item"><a href="#" class="btn btn-simple btn-lg">Members</a></li>
+                  <li class="nav-item"><a href="{% url 'home' %}">Home</a></li>
+                  <li class="nav-item"><a href="#">Members</a></li>
+                  <li class="nav-item"><a href="#">Events</a></li>
+                  <li class="nav-item"><a href="#">About Us</a></li>
               {% else %}
+                  <li class="nav-item"><a href="{% url 'home' %}">Home</a></li>
+                  <li class="nav-item"><a href="#">Events</a></li>
+                  <li class="nav-item"><a href="#">About Us</a></li>
               {% endif %}
-              <li class="nav-item"><a href="#" class="btn btn-simple btn-lg">Events</a></li>
-              <li class="nav-item"><a href="#" class="btn btn-simple btn-lg">About Us</a></li>
           </ul>
 
           <ul class="nav navbar-nav navbar-right">
               {% if user.is_authenticated %}
-                  <li class="nav-item"><a href="{% url 'posts:create' %}" class="btn btn-simple btn-lg">Post</a></li>
-                  <li class="nav-item"><a href="{% url 'groups:all' %}" class="btn btn-simple btn-lg">Groups</a></li>
-                  <li class="nav-item"><a href="{% url 'groups:create' %}" class="btn btn-simple btn-lg">Create Group</a></li>
-                  <li class="nav-item"><a href="{% url 'accounts:logout' %}" class="btn btn-simple btn-lg">Logout</a></li>
+                  <li class="nav-item"><a href="{% url 'accounts:logout' %}">Logout</a></li>
               {% else %}
-                  <li class="nav-item"><a href="{% url 'accounts:login' %}" class="btn btn-simple btn-lg">Log in</a></li>
-                  <li class="nav-item"><a href="{% url 'accounts:signup' %}" class="btn btn-simple btn-lg">Sign up</a></li>
+                  <li class="nav-item"><a href="{% url 'accounts:login' %}">Log in</a></li>
+                  <li class="nav-item"><a href="{% url 'accounts:signup' %}">Sign up</a></li>
               {% endif %}
           </ul>
         </div>
