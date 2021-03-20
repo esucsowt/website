@@ -7,4 +7,10 @@ class GroupMemberInline(admin.TabularInline):
     model = models.GroupMember
 
 
-admin.site.register(models.Group)
+class GroupsAdmin(admin.ModelAdmin):
+    search_fields = ['name']
+    list_filter = ['name']
+    list_display = ['name', 'description']
+
+
+admin.site.register(models.Group, GroupsAdmin)
