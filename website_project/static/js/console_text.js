@@ -1,5 +1,5 @@
 // function([string1, string2],target id,[color1,color2])
- consoleText(['Coming Soon', 'Hello World'], 'text',['white','lightblue']);
+ consoleText(['C:/Computer_Science_Organization', 'RUN C:/CSO/Hello_World'], 'text',['white','white']);
 
 function consoleText(words, id, colors) {
   if (colors === undefined) colors = ['#fff'];
@@ -7,7 +7,7 @@ function consoleText(words, id, colors) {
   var letterCount = 1;
   var funnyCatFrequency = 5;
   var funnyCatCount = 0;
-  var funnyCat = 'FUNNY CAT TYPING';
+  var funnyCat = 'RUN C:/CSO_Official_Website';
   var funnyCatColor = 'limegreen';
   var x = 1;
   var waiting = false;
