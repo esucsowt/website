@@ -45,7 +45,7 @@
 
 @font-face {
     font-family: logoFont;
-    src: url(logofont.ttf);
+    src: url(computo-monospace.otf);
 }
 
 
@@ -78,7 +78,7 @@ body {
 }
 
 .console-container-construction {
-    font-family: logoFont;
+  font-family: logoFont;
   font-size: 3em;
   text-align: center;
   margin-top: -85px;
@@ -350,4 +350,12 @@ margin-bottom: -60px;
 .py-5{
     margin-top: -190px;
     margin-bottom: 60px;
+}
+
+a.button {
+    -webkit-appearance: button;
+    -moz-appearance: button;
+    appearance: button;
+
+    text-decoration: none;
 }
