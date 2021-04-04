@@ -65,8 +65,6 @@ body {
   font-family: logoFont;
   font-size: 3em;
   text-align: center;
-  height: 200px;
-  width: 600px;
   display: block;
   position: relative;
   color: white;
@@ -74,7 +72,34 @@ body {
   bottom: 0;
   left: 0;
   right: 0;
-  margin: auto;
+  margin-top: -150px;
+  margin-left: 11%;
+  margin-right: 11%;
+}
+
+.console-container-construction {
+    font-family: logoFont;
+  font-size: 3em;
+  text-align: center;
+  margin-top: -85px;
+  display: block;
+  position: relative;
+  color: white;
+  top: 100px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.construction_text{
+   text-align: center;
+   color:white;
+}
+
+.btn{
+color:white;
+font-color:white;
+text-color:white;
 }
 
 .console-underscore {
@@ -88,6 +113,7 @@ body {
   display: block;
   margin-left: auto;
   margin-right: auto;
+  margin-top:6%;
   border: solid 2px black;
   border-radius: 25px;
 }
@@ -133,6 +159,43 @@ body {
   transform: translate(-50%, -50%);
 }
 
+.footer-size {
+height:10px !important;
+}
+
+.footer-text {
+color:white;
+margin-right: 25px;
+}
+
+.footer-navtext{
+margin-top: 5px;
+margin-left: 7%;
+text-align: center;
+}
+
+.footer-disclaimer{
+margin-top: 15px;
+font-weight: bold;
+font-size: 17px;
+color:gray;
+text-align: center;
+}
+
+.footer-margin{
+margin-top: 5px;
+margin-bottom: 10px;
+}
+
+.below-footer-bg{
+background:#202020;
+padding: 1px;
+}
+
+.right-footer{
+margin-left: -15px;
+margin-right: -5px;
+}
 
 /*
 *****************************
@@ -156,13 +219,32 @@ body {
   background-color: #39A0ED;
 }
 
+.below-footer {
+  width: 100%;
+  height: 10px;
+  border-style: solid;
+  border-width: 2px;
+  border-color: #161613;
+  border-radius: 5px;
+  background-color: #39A0ED;
+}
+
+
+
+
 .navbar-right {
+    margin-top: -5px;
+    margin-bottom: -5px;
     margin-left: 5px;
     margin-right: 5px;
+
+
 }
 
 .navbar-left {
-    margin-left: 5px;
+    margin-top: -5px;
+    margin-bottom: -5px;
+    margin-left: -15px;
     margin-right: 5px;
 }
 
@@ -213,4 +295,127 @@ body {
   .navbar-toggle {
     z-index: 1060;
   }
+}
+
+.carousel {
+  margin-bottom: 4rem;
+}
+
+.carousel-caption {
+  bottom: 3rem;
+  z-index: 10;
+}
+
+.carousel-item {
+  height: 32rem;
+  background-color: #777;
+}
+.carousel-item > img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  height: 32rem;
+}
+
+.landingpageinfo.col-lg-4 {
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+.landingpageinfo h2 {
+  font-weight: 400;
+}
+.landingpageinfo .col-lg-4 p {
+  margin-right: .75rem;
+  margin-left: .75rem;
+}
+.landingpageinfo.lead{
+text-color:white;
+}
+
+.landingpageinfo{
+text-color:white;
+}
+
+.titlemain{
+margin-top: -95px;
+padding-bottom:15px;
+text-align:center;
+}
+
+.RBorder {
+    border-right: thin;
+    border-right-color: white;
+    border-right-style: solid;
+}
+.newsevents{
+margin-top:-65px;
+}
+
+centertitle{
+content-align:center;
+text-align:center;
+}
+
+
+.featurette-divider {
+  margin: 5rem 0;
+}
+
+
+.featurette-heading {
+  font-weight: 300;
+  line-height: 1;
+  letter-spacing: -.05rem;
+  color:white;
+}
+
+.featurette-image{
+    height: 300px;
+    width: 400px;
+}
+
+body.row featurette {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  color: #5a5a5a;
+}
+@media (min-width: 40em) {
+  .carousel-caption p {
+    margin-bottom: 1.25rem;
+    font-size: 1.25rem;
+    line-height: 1.4;
+  }
+
+  .featurette-heading {
+    font-size: 50px;
+  }
+}
+
+@media (min-width: 62em) {
+  .featurette-heading {
+    margin-top: 7rem;
+  }
+}
+
+.lead{
+color: white;
+}
+
+.maincon{
+color: white;
+}
+
+.owl-theme{
+margin-top: -50px;
+margin-bottom: -60px;
+}
+
+.card{
+    background-color: white;
+}
+
+.py-5{
+    margin-top: -190px;
+    margin-bottom: 60px;
 }

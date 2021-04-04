@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+ <div class='console-container-construction col-lg-12'>
+      <span id='text'></span>
+      <div class='console-underscore' id='console'></div>
+         <script src="{% static 'js/console_text_construction.js' %}"></script>
+    </div>
+
+    <div>
+      <img class="front-pic" src="{% static 'images/cat-keyboard.gif' %}" alt="">
+        <h3 class="construction_text">This page is currently under construction. Please be patient while our website designer above finishes it.</h3>
+    </div>
+
+{% endblock %}

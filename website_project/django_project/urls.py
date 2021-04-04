@@ -20,6 +20,7 @@ from django.conf import settings
 
 urlpatterns = [
     path('', views.HomePage.as_view(), name='home'),
+    path('underconstruction/', views.ConstructionPage.as_view(), name='underconstruction'),
     path('admin/', admin.site.urls),
     path('accounts/', include('accounts.urls', namespace='accounts')),
     path('accounts/', include('django.contrib.auth.urls')),
@@ -27,6 +28,7 @@ urlpatterns = [
     path('thanks/', views.ThanksPage.as_view(), name='thanks'),
     path('posts/', include('posts.urls', namespace='posts')),
     path('groups/', include('groups.urls', namespace='groups')),
+    path('projects/', views.ProjectPage.as_view(), name='projects'),
 ]
 
 if settings.DEBUG:
