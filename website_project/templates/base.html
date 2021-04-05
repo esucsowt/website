@@ -6,15 +6,25 @@
     <title>Computer Science Organization</title>
 
     <!-- BOOTSTRAP -->
-    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'vendor/bootstrap/bootstrap.min.css' %}">
+
+    <!--  Vendor CSS Files  -->
+    <link rel="stylesheet" href="{% static 'vendor/icofont/icofont.min.css' %}">
+
     <!--  CSS  -->
     <link rel="stylesheet" href="{% static 'css/master.css' %}">
-    <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}">
-    <link rel="stylesheet" href="{% static 'css/owl.theme.default.min.css' %}">
+    <link rel="stylesheet" href="{% static 'vendor/owl/owl.carousel.min.css' %}">
+    <link rel="stylesheet" href="{% static 'vendor/owl/owl.theme.default.min.css' %}">
 
     <!--  GOOGLE FONT  -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap" rel="stylesheet">
+
+    <!-- Javascript -->
+    <script src="{% static 'vendor/bootstrap/jquery-3.6.0.min.js' %}"></script>
+    <script src="{% static 'vendor/bootstrap/bootstrap.min.js' %}"></script>
+    <script src="{% static 'vendor/owl/owl.carousel.min.js' %}"></script>
+    <script src="{% static 'js/main.js' %}"></script>
 </head>
 <body>
 
@@ -99,7 +109,7 @@
                 <a class="footer-text" href="{% url 'projects' %}">Projects</a>
                 <a class="footer-text" href="{% url 'underconstruction' %}">News/Events</a>
                 <a class="footer-text" href="{% url 'underconstruction' %}">About us</a>
-                <a class="float-right footer-text right-footer" class="footer-text" href="#top">Back to top</a>
+                <a class="back-to-top" style="text-decoration: none;" href="#"><i class="icofont-rounded-up"></i></a>
             </p>
             </div>
 
@@ -107,10 +117,5 @@
             <p class=" footer-disclaimer">This website was designed and is managed by Computer Science Organization members.</p>
         </div>
     </footer>
-
-    <!-- Javascript -->
-    <script src="{% static 'js/jquery-3.6.0.min.js' %}"></script>
-    <script src="{% static 'js/bootstrap.min.js' %}"></script>
-    <script src="{% static 'js/owl.carousel.min.js' %}"></script>
 </body>
 </html>
