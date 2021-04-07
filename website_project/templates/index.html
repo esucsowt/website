@@ -1,32 +1,6 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block content %}
-<script>
-window.onload = function()
-{
-  $('.owl-carousel').owlCarousel({
-    items: 8,
-    loop:true,
-    autoplay:true,
-    margin:10,
-    nav:true,
-    autoplayTimeout:1000,
-    autoplayHoverPause:true,
-    responsive:{
-        0:{
-            items:1
-        },
-        600:{
-            items:3
-        },
-        1000:{
-            items:5
-        }
-    }
-})
-owl.trigger('play.owl.autoplay',[1000])
-}
-</script>
 
 <!-- Carousel--!>
 <div class="carousel slide" data-ride="carousel">
@@ -50,7 +24,7 @@ owl.trigger('play.owl.autoplay',[1000])
         <div class="col-lg-12">
             <span id='text'></span>
             <div class='console-underscore' id='console'></div>
-            <script src="{% static 'js/console_text.js' %}"></script>
+            <script src="{% static 'js/main.js' %}"></script>
         </div>
     </div>
 </div>
@@ -115,8 +89,8 @@ owl.trigger('play.owl.autoplay',[1000])
             </div>
             <div class="col-lg-3">
                 <img class="rounded-circle" src="{% static 'images/project_conf.jpg' %}" width="140" height="140">
-                <h2>Confrences</h2>
-                <p>We go to confrences.</p>
+                <h2>Conferences</h2>
+                <p>We go to conferences.</p>
             </div>
             <div class="col-lg-3">
                 <img class="rounded-circle" src="{% static 'images/project_windmill.jpg' %}" width="140" height="140">
