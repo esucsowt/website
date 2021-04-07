@@ -266,6 +266,39 @@ padding-bottom:15px;
 text-align:center;
 }
 
+/*--------------------------------------------------------------
+# Log in form
+--------------------------------------------------------------*/
+.log-in-form {
+  padding-top: 30px;
+  padding-bottom: 40px;
+  padding-right: 30px;
+  padding-left: 30px;
+  border-radius: 10px;
+  background-color: #808080;
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+
+/*--------------------------------------------------------------
+# Sign in form
+--------------------------------------------------------------*/
+.sign-up-form {
+  padding-top: 30px;
+  padding-bottom: 40px;
+  padding-right: 30px;
+  padding-left: 30px;
+  border-radius: 10px;
+  background-color: #808080;
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+
+.sign-up-form .form-text {
+  color: white !important;
+}
+
+
 .RBorder {
     border-right: thin;
     border-right-color: white;
@@ -336,11 +369,6 @@ margin-bottom: -60px;
 
 .card{
     background-color: white;
-}
-
-.py-5{
-    margin-top: -190px;
-    margin-bottom: 60px;
 }
 
 /*--------------------------------------------------------------
