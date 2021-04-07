@@ -1,6 +1,6 @@
 django==3.1.5
 django[argon2]==3.1.5
-django-bootstrap3==14.1.0
+django-bootstrap4==2.3.1
 python-dotenv==0.15.0
 bcrypt==3.2.0
 misaka==2.1.1
