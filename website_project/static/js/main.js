@@ -1,5 +1,6 @@
+// Console Text
 // function([string1, string2],target id,[color1,color2])
- consoleText(['Coming Soon', 'Hello World'], 'text',['white','lightblue']);
+ consoleText(['C:/Computer_Science_Organization', 'RUN C:/CSO/Hello_World'], 'text',['white','white']);
 
 function consoleText(words, id, colors) {
   if (colors === undefined) colors = ['#fff'];
@@ -7,7 +8,7 @@ function consoleText(words, id, colors) {
   var letterCount = 1;
   var funnyCatFrequency = 5;
   var funnyCatCount = 0;
-  var funnyCat = 'FUNNY CAT TYPING';
+  var funnyCat = 'RUN C:/CSO_Official_Website';
   var funnyCatColor = 'limegreen';
   var x = 1;
   var waiting = false;
@@ -66,4 +67,48 @@ function consoleText(words, id, colors) {
       con.textContent = symbol
     }
   }, 400)
+}
+
+// BACK TO TOP BUTTON
+$(window).scroll(function() {
+    var height = $(window).scrollTop();
+    if (height > 100) {
+        $('.back-to-top').fadeIn();
+    } else {
+        $('.back-to-top').fadeOut();
+    }
+});
+$(document).ready(function() {
+    $(".back-to-top").click(function(event) {
+        event.preventDefault();
+
+        $("html, body").animate({ scrollTop: 0 }, "slow");
+        return false;
+    });
+
+});
+
+// Owl Carousel
+window.onload = function()
+{
+  $('.owl-carousel').owlCarousel({
+    items: 8,
+    loop:true,
+    autoplay:true,
+    margin:10,
+    nav:true,
+    autoplayTimeout:1000,
+    autoplayHoverPause:true,
+    responsive:{
+        0:{
+            items:1
+        },
+        600:{
+            items:3
+        },
+        1000:{
+            items:5
+        }
+    }
+})
 }

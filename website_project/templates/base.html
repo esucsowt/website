@@ -3,17 +3,28 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>CSO</title>
+    <title>Computer Science Organization</title>
 
     <!-- BOOTSTRAP -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'vendor/bootstrap/bootstrap.min.css' %}">
+
+    <!--  Vendor CSS Files  -->
+    <link rel="stylesheet" href="{% static 'vendor/icofont/icofont.min.css' %}">
 
     <!--  CSS  -->
     <link rel="stylesheet" href="{% static 'css/master.css' %}">
+    <link rel="stylesheet" href="{% static 'vendor/owl/owl.carousel.min.css' %}">
+    <link rel="stylesheet" href="{% static 'vendor/owl/owl.theme.default.min.css' %}">
 
     <!--  GOOGLE FONT  -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap" rel="stylesheet">
+
+    <!-- Javascript -->
+    <script src="{% static 'vendor/bootstrap/jquery-3.6.0.min.js' %}"></script>
+    <script src="{% static 'vendor/bootstrap/bootstrap.min.js' %}"></script>
+    <script src="{% static 'vendor/owl/owl.carousel.min.js' %}"></script>
+    <script src="{% static 'js/main.js' %}"></script>
 </head>
 <body>
 
@@ -32,59 +43,79 @@
     </section>
 
     <section id="navigation-bar">
-      <nav class="navbar navbar-inverse navbar-expand-lg navbar-static-top" role="navigation">
-        <div class="navbar-header" style="padding-left: 10px">
-            <button class="pull-left navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-elements">
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-        </div>
-        
-        <div class="collapse navbar-collapse" id="navbar-elements">
+        <nav class="navbar navbar-expand-md navbar-dark navbar-static-top">
+            <div class="navbar-header">
+                <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
 
-          <ul class="nav navbar-nav navbar-center">
-              <form class="form-inline">
-                  <input class="form-control" type="search" placeholder="Search" aria-label="Search">
-                  <button class="btn btn-outline-success" type="submit">
-                      <span class="glyphicon glyphicon-search"></span>
-                  </button>
-              </form>
-          </ul>
-
-          <ul class="nav navbar-nav navbar-left">
-              {% if user.is_authenticated %}
-                  <li class="nav-item"><a href="{% url 'home' %}">Home</a></li>
-                  <li class="nav-item"><a href="#">Members</a></li>
-                  <li class="nav-item"><a href="#">Events</a></li>
-                  <li class="nav-item"><a href="{% url 'about' %}">About Us</a></li>
-              {% else %}
-                  <li class="nav-item"><a href="{% url 'home' %}">Home</a></li>
-                  <li class="nav-item"><a href="#">Events</a></li>
-                  <li class="nav-item"><a href="{% url 'about' %}">About Us</a></li>
-              {% endif %}
-          </ul>
-
-          <ul class="nav navbar-nav navbar-right">
-              {% if user.is_authenticated %}
-                  <li class="nav-item"><a href="{% url 'accounts:logout' %}">Logout</a></li>
-              {% else %}
-                  <li class="nav-item"><a href="{% url 'accounts:login' %}">Log in</a></li>
-                  <li class="nav-item"><a href="{% url 'accounts:signup' %}">Sign up</a></li>
-              {% endif %}
-          </ul>
-        </div>
-      </nav>
-      <div class="below-nav"></div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item"><a href="{% url 'home' %}" class="btn btn-simple btn-lg">Home</a></li>
+                    {% if user.is_authenticated %}
+                        <li class="nav-item"><a href="{% url 'underconstruction' %}" class="btn btn-simple btn-lg">Members</a></li>
+                    {% else %}
+                    {% endif %}
+                    <li class="nav-item"><a href="{% url 'projects' %}" class="btn btn-simple btn-lg">Projects</a></li>
+                    <li class="nav-item"><a href="{% url 'underconstruction' %}" class="btn btn-simple btn-lg">News/Events</a></li>
+                    <li class="nav-item"><a href="{% url 'underconstruction' %}" class="btn btn-simple btn-lg">About Us</a></li>
+                </ul>
+                <ul class="navbar-nav ml-auto">
+                    {% if user.is_authenticated %}
+                        <li class="nav-item "><a href="{% url 'posts:create' %}" class="btn btn-simple btn-lg ">Post</a></li>
+                        <li class="nav-item"><a href="{% url 'groups:all' %}" class="btn btn-simple btn-lg">Groups</a></li>
+                        <li class="nav-item"><a href="{% url 'groups:create' %}" class="btn btn-simple btn-lg">Create Group</a></li>
+                        <div class="dropdown-divider"></div>
+                        <li class="nav-item"><a href="{% url 'accounts:logout' %}" class="btn btn-simple btn-lg">Logout</a></li>
+                    {% else %}
+                        <div class="dropdown-divider"></div>
+                        <div class="d-none d-lg-block">
+                            <li class="nav-item"><a href="{% url 'accounts:login' %}" class="btn btn-simple btn-lg">Sign in</a></li>
+                        </div>
+                        <li class="nav-item"><a href="{% url 'accounts:signup' %}" class="btn btn-simple btn-lg">Sign up</a></li>
+                    {% endif %}
+                </ul>
+            </div>
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <div class="d-block d-md-none">
+                        <a href="{% url 'accounts:login' %}" class="btn btn-simple btn-lg">Sign in</a>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+        <div class="below-nav"></div>
     </section>
 
     {% block content %}
 
     {% endblock %}
+    <footer>
+      <div class="logo-background">
+        <div class="orange-red-crayola footer-size"></div>
+        <div class="flame footer-size"></div>
+        <div class="honey-yellow footer-size"></div>
+        <div class="mountain-meadow footer-size"></div>
+        <div class="sea-green-crayola footer-size"></div>
+        <div class="carolina-blue footer-size"></div>
+        <div class="logo-image-container footer-size">
+        </div>
+      </div>
 
-    <!-- Javascript -->
-    <script src="https://code.jquery.com/jquery-3.1.1.min.js"        integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="     crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+       <div class="col footer-margin">
+            <p class="lead footer-navtext">
+                <a class="footer-text" href="{% url 'home' %}">Home </a>
+                <a class="footer-text" href="{% url 'projects' %}">Projects</a>
+                <a class="footer-text" href="{% url 'underconstruction' %}">News/Events</a>
+                <a class="footer-text" href="{% url 'underconstruction' %}">About us</a>
+                <a class="back-to-top" style="text-decoration: none;" href="#"><i class="icofont-rounded-up"></i></a>
+            </p>
+       </div>
 
+        <div class="col below-footer-bg">
+            <p class=" footer-disclaimer">This website was designed and is managed by Computer Science Organization members.</p>
+        </div>
+    </footer>
 </body>
 </html>

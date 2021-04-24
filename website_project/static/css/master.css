@@ -1,24 +1,48 @@
-/*
-*****************************
-*****************************
-*** FONT ********************
-*****************************
-*****************************
-*/
+/*--------------------------------------------------------------
+# Container
+--------------------------------------------------------------*/
+@media (min-width: 768px) {
+    .container-small {
+        width: 300px;
+    }
+    .container-large {
+        width: 970px;
+    }
+}
+@media (min-width: 992px) {
+    .container-small {
+        width: 500px;
+    }
+    .container-large {
+        width: 1170px;
+    }
+}
+@media (min-width: 1200px) {
+    .container-small {
+        width: 700px;
+    }
+    .container-large {
+        width: 1500px;
+    }
+}
 
-@font-face {
-    font-family: logoFont;
-    src: url(logofont.ttf);
+.container-small, .container-large {
+    max-width: 100%;
 }
 
 
-/*
-*****************************
-*****************************
-*** COMING SOON *************
-*****************************
-*****************************
-*/
+/*--------------------------------------------------------------
+# Font
+--------------------------------------------------------------*/
+@font-face {
+    font-family: logoFont;
+    src: url(computo-monospace.otf);
+}
+
+
+/*--------------------------------------------------------------
+# Coming soon
+--------------------------------------------------------------*/
 
 body {
     background-color: #32353b;
@@ -28,8 +52,6 @@ body {
   font-family: logoFont;
   font-size: 3em;
   text-align: center;
-  height: 200px;
-  width: 600px;
   display: block;
   position: relative;
   color: white;
@@ -37,7 +59,34 @@ body {
   bottom: 0;
   left: 0;
   right: 0;
-  margin: auto;
+  margin-top: -150px;
+  margin-left: 11%;
+  margin-right: 11%;
+}
+
+.console-container-construction {
+  font-family: logoFont;
+  font-size: 3em;
+  text-align: center;
+  margin-top: -85px;
+  display: block;
+  position: relative;
+  color: white;
+  top: 100px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.construction_text{
+   text-align: center;
+   color:white;
+}
+
+.btn{
+color:white;
+font-color:white;
+text-color:white;
 }
 
 .console-underscore {
@@ -51,18 +100,15 @@ body {
   display: block;
   margin-left: auto;
   margin-right: auto;
+  margin-top:6%;
   border: solid 2px black;
   border-radius: 25px;
 }
 
 
-/*
-*****************************
-*****************************
-*** LOGO BACKGROUND *********
-*****************************
-*****************************
-*/
+/*--------------------------------------------------------------
+# Logo background
+--------------------------------------------------------------*/
 
 .logo-background { position: relative; }
 
@@ -96,14 +142,47 @@ body {
   transform: translate(-50%, -50%);
 }
 
+.footer-size {
+height:10px !important;
+}
 
-/*
-*****************************
-*****************************
-*** NAV MENU ****************
-*****************************
-*****************************
-*/
+.footer-text {
+color:white;
+margin-right: 25px;
+}
+
+.footer-navtext{
+margin-top: 5px;
+margin-left: 7%;
+text-align: center;
+}
+
+.footer-disclaimer{
+margin-top: 15px;
+font-weight: bold;
+font-size: 17px;
+color:gray;
+text-align: center;
+}
+
+.footer-margin{
+margin-top: 5px;
+margin-bottom: 10px;
+}
+
+.below-footer-bg{
+background:#202020;
+padding: 1px;
+}
+
+.right-footer{
+margin-left: -15px;
+margin-right: -5px;
+}
+
+/*--------------------------------------------------------------
+# Nav menu
+--------------------------------------------------------------*/
 
 .navbar {
   margin-bottom: 0;
@@ -119,41 +198,204 @@ body {
   background-color: #39A0ED;
 }
 
-.navbar-brand {
-    position: absolute;
-    width: 100%;
-    left: 0;
-    text-align: center;
-    margin:0 auto;
-    font-family: 'Lato', sans-serif;
-    font-size: 2em;
+/*--------------------------------------------------------------
+# Footer
+--------------------------------------------------------------*/
+
+.below-footer {
+  width: 100%;
+  height: 10px;
+  border-style: solid;
+  border-width: 2px;
+  border-color: #161613;
+  border-radius: 5px;
+  background-color: #39A0ED;
 }
 
-.navbar-nav li {
-    font-family: 'Lato', sans-serif;
-    font-size: 1.5em;
+/*--------------------------------------------------------------
+# Carousel
+--------------------------------------------------------------*/
+
+.carousel {
+  margin-bottom: 4rem;
 }
 
-.navbar-right {
-    margin-right: 5px;
+.carousel-caption {
+  bottom: 3rem;
+  z-index: 10;
 }
 
-.navbar-left {
-    margin-left: 5px;
+.carousel-item {
+  height: 32rem;
+  background-color: #777;
+}
+.carousel-item > img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  height: 32rem;
+}
+
+/*--------------------------------------------------------------
+# Landing Page
+--------------------------------------------------------------*/
+
+.landingpageinfo.col-lg-4 {
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+.landingpageinfo h2 {
+  font-weight: 400;
+}
+.landingpageinfo .col-lg-4 p {
+  margin-right: .75rem;
+  margin-left: .75rem;
+}
+.landingpageinfo.lead{
+text-color:white;
+}
+
+.landingpageinfo{
+text-color:white;
+}
+
+.titlemain{
+margin-top: -95px;
+padding-bottom:15px;
+text-align:center;
+}
+
+/*--------------------------------------------------------------
+# Log in form
+--------------------------------------------------------------*/
+.log-in-form {
+  padding-top: 30px;
+  padding-bottom: 40px;
+  padding-right: 30px;
+  padding-left: 30px;
+  border-radius: 10px;
+  background-color: #808080;
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+
+/*--------------------------------------------------------------
+# Sign in form
+--------------------------------------------------------------*/
+.sign-up-form {
+  padding-top: 30px;
+  padding-bottom: 40px;
+  padding-right: 30px;
+  padding-left: 30px;
+  border-radius: 10px;
+  background-color: #808080;
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+
+.sign-up-form .form-text {
+  color: white !important;
 }
 
 
-/* Values if the screen width of media is small (phone screens) */
-@media (min-width: 767px) {
-  .navbar-nav.navbar-center {
-    position: absolute;
-    left: 0;
-    right: 0;
-    margin: auto;
-    width: 100%;
-    float: none;
-    text-align: center;
-    padding: 8px 0;
+.RBorder {
+    border-right: thin;
+    border-right-color: white;
+    border-right-style: solid;
+}
+.newsevents{
+margin-top:-65px;
+}
+
+centertitle{
+content-align:center;
+text-align:center;
+}
+
+
+.featurette-divider {
+  margin: 5rem 0;
+}
+
+
+.featurette-heading {
+  font-weight: 300;
+  line-height: 1;
+  letter-spacing: -.05rem;
+  color:white;
+}
+
+.featurette-image{
+    height: 300px;
+    width: 400px;
+}
+
+body.row featurette {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  color: #5a5a5a;
+}
+@media (min-width: 40em) {
+  .carousel-caption p {
+    margin-bottom: 1.25rem;
+    font-size: 1.25rem;
+    line-height: 1.4;
+  }
+
+  .featurette-heading {
+    font-size: 50px;
   }
 }
 
+@media (min-width: 62em) {
+  .featurette-heading {
+    margin-top: 7rem;
+  }
+}
+
+.lead{
+color: white;
+}
+
+.maincon{
+color: white;
+}
+
+.owl-theme{
+margin-top: -50px;
+margin-bottom: -60px;
+}
+
+.card{
+    background-color: white;
+}
+
+/*--------------------------------------------------------------
+# Back to top button
+--------------------------------------------------------------*/
+.back-to-top {
+  position: fixed;
+  display: none;
+  right: 15px;
+  bottom: 15px;
+  z-index: 99999;
+}
+
+.back-to-top i {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  width: 40px;
+  height: 40px;
+  border-radius: 4px;
+  background: #C0C0C0;
+  color: #fff;
+  transition: all 0.4s;
+}
+
+.back-to-top i:hover {
+  background: #D3D3D3;
+  color: #fff;
+}
